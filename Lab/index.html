@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="main.css" rel="stylesheet">
+    <link href="modal.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gayathri|Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="validate.js"></script>
+    
+</head>
+<body>
+    <div class="head">
+            <div class="header_info">
+                <div class="text_head" id="number">
+                    LAB ONE
+                </div>
+                <div id="var"> 
+                    <a target="_blank" href="http://se.ifmo.ru"> GROUP: Р3202 V-202013 </a>
+                </div>
+                <div id="group"> 
+                    <a target="_blank" href="https://vk.com/parvum_malum">NEKRASOVA ANASTASIYA </a>
+                </div>
+            </div>
+    </div>
+
+   
+    <div class="main_bg">
+
+    	<div class="pr_text">
+    		<p><a href="https://abit.ifmo.ru/" target="_blank">You can study here</a></p>
+    		<p>YOUR NEW EXPERIENCE</p>
+    		<p>Проверь, как долго выдержат твои <br> нервы на новом иновационнов сервисе <br> от se.ifmo.ru</p>
+    	</div>
+
+    	
+
+    	<div class="features">
+    		<div class="img_first_p">
+    			<img src="first_img_p.png" width="50%">
+    		</div>
+    		<div class="text_first_p">Наш сервис проверен на баги <br> и гарантирует стабильную работу</div>
+    		<div class="img_second_p">
+    			<img src="second_img_p.png" width="50%">
+    		</div>
+    		<div class="text_second_p">Мы не взымаем <br>дополнительных плат за услуги</div>
+    	</div>
+
+    	<div class="text_instr">
+    		<p><a href="http://edu.ifmo.ru/file/pages/54/reglament_ob_otchislenii.pdf" target="_blank">Don't be shure</a></p>
+    		<p>CHECK YOUR COORDINATE <br> IN LIFE</p>
+    		<p>Введите ваши координаты и  проверьте, <br> насколько   выспособны   не   ошибиться <br> в своем выборе и попасть  в  указанную <br> ниже область. </p>
+    		<div style=" 
+    		font-family: monospace;
+			font-size: 18px;
+			color: #29449b;
+			padding-left: 280px;
+			text-align: center;
+			font-weight: normal;
+			line-height: 4px;">
+				Ха-Ха..
+			</div>
+			<button class="start"><a href="#one"> START</a></button>
+
+    	</div>
+    	<div class="img_monster">
+    		<img src="monster.png" width="40%">
+    	</div>
+		<div class="tail" id="one"><img src="tail.png" width="100%"></div>
+    	<div class="task_h">
+    		<p >So</p>
+    		<p>NOW...</p>
+    	</div>
+
+    	<div class="task_n">
+    		
+    		
+
+    		<div class="input_f">
+    		<form action="task.php" method="GET" target="result">
+    		<div class="img_gr"> <img src="graph.png" width="100%">
+    		</div>
+    				
+    					<div class="input_field"> 
+    					<span> DATA: </span>
+    						<div class="coordinate">
+
+    							<div class="X_coordinate">
+    							<span> X: </span>
+    							<button type="button" class = "X_button" id="x-5" onclick="x_choosen('-5')">-5</button> 
+    							<button type="button" class = "X_button" id="x-4" onclick="x_choosen('-4')">-4</button> 
+    							<button type="button" class = "X_button" id="x-3" onclick="x_choosen('-3')">-3</button> 
+    							<button type="button" class = "X_button" id="x-2" onclick="x_choosen('-2')">-2</button> 
+    							<button type="button" class = "X_button" id="x-1" onclick="x_choosen('-1')">-1</button> 
+    							<button type="button" class = "X_button" id="x0" onclick="x_choosen('0')">0</button> 
+    							<button type="button" class = "X_button" id="x1" onclick="x_choosen('1')">1</button> 
+    							<button type="button" class = "X_button" id="x2" onclick="x_choosen('2')">2</button> 
+    							<button type="button" class = "X_button" id="x3" onclick="x_choosen('3')">3</button> 
+    							<input type="hidden" name="X_coordinate" id="X_field">
+    							</div>
+
+    							<div class="Y_coordinate">
+    							<span> Y: </span>
+    							<input autocomplete="off" type ="text" name="Y_coordinate" id="Y_field" oninput="y_choosen();" placeholder="[-5..3]">
+    							</div>
+
+    							<div class="R_coordinate">  
+    							<span> R: </span>
+    							<input autocomplete="off" type="text" name="R_coordinate" id="R_field" oninput="r_choosen();" placeholder="[2..5]">
+    							</div>
+
+    							<span style="display: none;  margin-bottom:10px; margin-left: 15%; font-size: 20px;" id="ph"> Введите корректные значения </span>
+
+    						</div>
+
+    						<div class="button_check">
+    						<button type="submit" disabled="disabled" id="check" onclick="count_up();">CHECK</button>
+    						</div>
+						</div>
+
+    					<div class="text_to_table">
+    						Результат попадания представлен ниже <br> в интерактивной таблице.
+    					</div>
+
+    					<div class="table">
+  							<span> RESULT: </span>
+    						<iframe name= "result" id="result" src="result_table.php" frameBorder="0" seamless width="100%" height="100%"></iframe>
+    					</div>
+    				</form>
+    			</div>
+		</div>
+	</div>
+
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+
+            <div class="img_svg">
+
+                <object type="image/svg+xml" data="wallet.svg" width="200" height="200" >
+
+                </object>
+            </div>
+            <p>Упс... У вас закончились попытки. Для продолжения работы пополните свой счет.</p>
+
+            <form method="POST" target="_blank" action="https://money.yandex.ru/quickpay/confirm.xml">
+                <input name="quickpay-form" value="small" type="hidden">
+                <input name="paymentType" value="AC" type="hidden">
+                <input name="receiver" value="410015331466951" type="hidden">
+                <input name="targets" value="пожертвование" type="hidden">
+                <input name="sum" value="100" type="hidden">
+                <input name="successURL" value="" type="hidden">
+                <input name="label" value="" type="hidden">
+                <input name="referer" value="" type="hidden">
+                <input name="is-inner-form" value="true" type="hidden">
+                <div class="yandex-btn">
+                    <button type="submit" class="m_button" style="border-color: black; width: 100px; font-size: 16px; height: 40px; border-radius: 10px;">
+                        <div class="yandex-btn-icon">
+                            <i class="icon icon_name_widget-small-PC-m widget-small__icon" aria-hidden="true"></i>
+                        </div>
+                        <span class="yandex-btn-text">Перевести</span>
+                    </button>
+                </div>
+            </form>
+            <div style="text-align: right; padding-top: 30px;"><img src="modal_img.png" width="50%"></div>
+
+            <div class="exit">
+                <p><a href="https://docs.google.com/spreadsheets/d/1hGx52Q6omjFo7D_0L_FXXhb5FyVR2I6m2bmbOKYdEVA/edit#gid=1452996600&range=M18" target="_blank" onclick="count_reset();"> Всегда есть другой выход.... </a></p>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript"> check_count(); </script>
+</body>
+</html>
